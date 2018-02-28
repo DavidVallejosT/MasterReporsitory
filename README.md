@@ -50,26 +50,6 @@ we had to recursively calculate such info.
 
 
 
-Class Hierachy
-
-		|-------------------------|             |------------|
-                |     BinarySearchTree    |--has-a----->|   BSTNode  |
-                |-------------------------|             |------------|
-                           ^    ^                           ^  ^
-                          /      \                          |  |
-                       is-a     is-a                        |  |
-                        /          \                        |  |
-                       /           |--------------|         |  |
-                      /            |  SplayTree   |-has-a---|  |
-                     /             |--------------|            |
-                    /                                        is-a 
-                   /                                           |
-    |----------------|                                  |------------|
-    |     AVLTree    |--has-a-------------------------->| AVLNode    |
-    |----------------|                                  |------------|
-   
-
-
 
 Q.  There is no SplayNode class.  Why does SplayTree use BSTNodes?
 
@@ -194,9 +174,6 @@ UpdateHeight function (which actually took 3.8 percent of the run time).
 Algorithmic Analysis
 --------------------
 
-From our "SelectionSortSort vs. HeapSort" plot, we can see that when N is greater than
-8000, selectionsort function grows faster than heapsort function. This confroms our knowledge
-that heap sort has better performance than selecion sort in terms of time.
 
 We know that both mergesort(f) and heapsort(g)  have O(n logn) runing time.
 In our "MergeSort vs. HeapSort" plot, two lines are parallel to each other most of the time.
